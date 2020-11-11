@@ -11,6 +11,11 @@
 		36F19E0A255BEE0F0036329A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F19E09255BEE0F0036329A /* ContentView.swift */; };
 		36F19E0C255BEE100036329A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36F19E0B255BEE100036329A /* Assets.xcassets */; };
 		36F19E0F255BEE100036329A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36F19E0E255BEE100036329A /* Preview Assets.xcassets */; };
+		36F19E18255BEEDE0036329A /* KittenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F19E17255BEEDE0036329A /* KittenView.swift */; };
+		36F19E1B255BEF2A0036329A /* KittensScrollableLazyVStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F19E1A255BEF2A0036329A /* KittensScrollableLazyVStackView.swift */; };
+		36F19E1F255BF1570036329A /* KittensModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F19E1E255BF1570036329A /* KittensModel.swift */; };
+		36F19E25255BF1E60036329A /* Kitten.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F19E24255BF1E60036329A /* Kitten.swift */; };
+		36F19E29255BF9820036329A /* KittensLazyVGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F19E28255BF9820036329A /* KittensLazyVGridView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +25,11 @@
 		36F19E0B255BEE100036329A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		36F19E0E255BEE100036329A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		36F19E10255BEE100036329A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		36F19E17255BEEDE0036329A /* KittenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KittenView.swift; sourceTree = "<group>"; };
+		36F19E1A255BEF2A0036329A /* KittensScrollableLazyVStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KittensScrollableLazyVStackView.swift; sourceTree = "<group>"; };
+		36F19E1E255BF1570036329A /* KittensModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KittensModel.swift; sourceTree = "<group>"; };
+		36F19E24255BF1E60036329A /* Kitten.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kitten.swift; sourceTree = "<group>"; };
+		36F19E28255BF9820036329A /* KittensLazyVGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KittensLazyVGridView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,7 +63,8 @@
 			isa = PBXGroup;
 			children = (
 				36F19E07255BEE0F0036329A /* BN_2026App.swift */,
-				36F19E09255BEE0F0036329A /* ContentView.swift */,
+				36F19E22255BF1860036329A /* Views */,
+				36F19E1D255BF14A0036329A /* Models */,
 				36F19E0B255BEE100036329A /* Assets.xcassets */,
 				36F19E10255BEE100036329A /* Info.plist */,
 				36F19E0D255BEE100036329A /* Preview Content */,
@@ -67,6 +78,26 @@
 				36F19E0E255BEE100036329A /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		36F19E1D255BF14A0036329A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				36F19E1E255BF1570036329A /* KittensModel.swift */,
+				36F19E24255BF1E60036329A /* Kitten.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		36F19E22255BF1860036329A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				36F19E17255BEEDE0036329A /* KittenView.swift */,
+				36F19E1A255BEF2A0036329A /* KittensScrollableLazyVStackView.swift */,
+				36F19E09255BEE0F0036329A /* ContentView.swift */,
+				36F19E28255BF9820036329A /* KittensLazyVGridView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,8 +169,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36F19E1F255BF1570036329A /* KittensModel.swift in Sources */,
 				36F19E0A255BEE0F0036329A /* ContentView.swift in Sources */,
+				36F19E29255BF9820036329A /* KittensLazyVGridView.swift in Sources */,
+				36F19E25255BF1E60036329A /* Kitten.swift in Sources */,
+				36F19E1B255BEF2A0036329A /* KittensScrollableLazyVStackView.swift in Sources */,
 				36F19E08255BEE0F0036329A /* BN_2026App.swift in Sources */,
+				36F19E18255BEEDE0036329A /* KittenView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,7 +312,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.netguru.bn-2021.BN-2026";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.netguru.bn-2026";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -297,7 +333,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.netguru.bn-2021.BN-2026";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.netguru.bn-2026";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
