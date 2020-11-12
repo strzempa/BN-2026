@@ -13,7 +13,7 @@ struct KittenView: View {
     var body: some View {
         kitten.img
             .resizable()
-            .aspectRatio(contentMode: .fill)
+            .aspectRatio(contentMode: .fit)
     }
 }
 

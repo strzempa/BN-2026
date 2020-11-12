@@ -10,4 +10,5 @@ import SwiftUI
 struct Kitten: Identifiable {
     var id: UUID
     var img: Image
+    var children: [Kitten]?
 }

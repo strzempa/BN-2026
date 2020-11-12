@@ -22,7 +22,11 @@ class KittensModel: ObservableObject {
     func produceKittens() {
         var elements: [Kitten] = []
         for _ in (0...numberOfCreations) {
-            elements.append(contentsOf: KittensModel.makeKittensSection().shuffled())
+            var objects = KittensModel.makeKittensSection().shuffled()
+            objects.enumerated().forEach { index, _ in
+                objects[index].children = KittensModel.makeKittensSection()
+            }
+            elements.append(contentsOf: objects)
         }
         self.aLotOfKittens = elements
     }

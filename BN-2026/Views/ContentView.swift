@@ -7,30 +7,30 @@
 
 import SwiftUI
 
-enum ContentType {
-    case lazyVStack
-    case lazyVGrid
-}
-
 struct ContentView: View {
-    private let contentType: ContentType = .lazyVGrid
+    @State private var contentType: ContentType?
+    private let model = KittensModel(numberOfCreations: 30)
     
     var body: some View {
-        switch contentType {
-        case .lazyVStack:
-            KittensScrollableLazyVStackView(
-                kittensModel: KittensModel(
-                    numberOfCreations: 22
-                )
-            )
-        case .lazyVGrid:
-            KittensLazyVGridView(
-                kittensModel: KittensModel(
-                    numberOfCreations: 333
-                )
-            )
+        VStack {
+            HStack {
+                ForEach(0..<allContentTypeButtons.count) { index in
+                    allContentTypeButtons[index]
+                }
+            }
+            Divider()
+            contentType?.view(from: model)
+            Spacer()
         }
-        
+    }
+}
+
+private extension ContentView {
+    var allContentTypeButtons: [AnyView] {
+        ButtonFactory
+            .allContentTypeButtons { type in
+                contentType = type
+            }
     }
 }
 
