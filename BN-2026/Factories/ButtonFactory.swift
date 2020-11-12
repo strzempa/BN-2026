@@ -8,17 +8,17 @@
 import SwiftUI
 
 enum ButtonFactory {
-    static func allContentTypeButtons(
+    static func makeAllContentTypeButtons(
         action: @escaping (ContentType) -> Void
     ) -> [AnyView] {
         ContentType
             .allCases
             .map {
-            ButtonFactory
-                .make(
-                    from: $0,
-                    action: action
-                )
+                ButtonFactory
+                    .make(
+                        from: $0,
+                        action: action
+                    )
             }
     }
 }

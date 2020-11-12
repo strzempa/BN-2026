@@ -20,14 +20,14 @@ struct KittensScrollableLazyVStackView: View {
                 ForEach(kittensModel.aLotOfKittens) { kitten in
                     KittenView(kitten: kitten)
                         .overlay(
-                        Button(action: {
-                            kittensModel.produceKittens()
-                        }) {
-                            Label("Shuffle",
-                                  systemImage: "shuffle")
-                                .foregroundColor(.white)
-                        }
-                    )
+                            Button(action: {
+                                kittensModel.produceKittens()
+                            }) {
+                                Label("Shuffle",
+                                      systemImage: "shuffle")
+                                    .foregroundColor(.white)
+                            }
+                        )
                 }
             }
         }

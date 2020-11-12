@@ -28,7 +28,7 @@ struct ContentView: View {
 private extension ContentView {
     var allContentTypeButtons: [AnyView] {
         ButtonFactory
-            .allContentTypeButtons { type in
+            .makeAllContentTypeButtons { type in
                 contentType = type
             }
     }
